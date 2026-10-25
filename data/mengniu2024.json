@@ -1,0 +1,120 @@
+{
+  "_meta": {
+    "company": "中国蒙牛乳业有限公司",
+    "short": "蒙牛乳业",
+    "ticker": "2319.HK",
+    "market": "港股 · 港交所（开曼注册）",
+    "period": "2024 年度",
+    "currency": "CNY",
+    "unit": "元",
+    "source_dir": "蒙牛乳业2024年报",
+    "source_note": "港股年报以「人民币千元」列示，本文件已统一乘以 1000 换算成「元」；中英双语，取中文（繁体）口径。",
+    "statement_pages": {
+      "contents": "page_003.md",
+      "audit_report": "page_131.md",
+      "income_statement": "page_140.md",
+      "balance_sheet": "page_142.md ~ page_144.md",
+      "cash_flow": "page_147.md ~ page_148.md",
+      "goodwill_note": "page_045.md ~ page_047.md",
+      "impairment_note": "page_161.md"
+    }
+  },
+  "income": {
+    "revenue": 88674774000,
+    "cost_of_sales": 53584334000,
+    "gross_profit": 35090440000,
+    "other_income_and_gains": 1031644000,
+    "selling_and_distribution": 23092601000,
+    "admin_expenses": 4228995000,
+    "impairment_financial_assets": 371712000,
+    "other_expenses": 6453014000,
+    "interest_income": 1411977000,
+    "finance_costs": 1467790000,
+    "share_of_associates": -871728000,
+    "profit_before_tax": 999177000,
+    "income_tax": 774572000,
+    "net_profit": 224605000,
+    "net_profit_parent": 104507000,
+    "net_profit_minority": 120098000,
+    "eps_basic": 0.027,
+    "revenue_2023": 98624041000,
+    "net_profit_parent_2023": 4809197000
+  },
+  "balance": {
+    "fixed_assets": 20905216000,
+    "construction_in_progress": 2278028000,
+    "right_of_use_assets": 2584719000,
+    "goodwill": 7677836000,
+    "other_intangible_assets": 8829053000,
+    "associates": 9648894000,
+    "total_noncurrent_assets": 70525007000,
+    "inventory": 4936666000,
+    "trade_receivables": 3261858000,
+    "cash": 17339157000,
+    "total_current_assets": 35767785000,
+    "total_assets": 106292792000,
+    "trade_payables": 8647226000,
+    "other_payables": 11244088000,
+    "borrowings_current": 16661575000,
+    "total_current_liabilities": 37006560000,
+    "borrowings_noncurrent": 17975625000,
+    "total_noncurrent_liabilities": 21260741000,
+    "total_liabilities": 58267301000,
+    "equity_parent": 41562287000,
+    "minority_interest": 6463204000,
+    "total_equity": 48025491000,
+    "goodwill_2023": 8952282000,
+    "total_assets_2023": 115219951000,
+    "total_liabilities_2023": 64568240000,
+    "equity_parent_2023": 44319959000
+  },
+  "cashflow": {
+    "operating_net": 8332256000,
+    "capex": 3475129000,
+    "investing_net": -3500120000,
+    "depreciation": 2953109000,
+    "rou_depreciation": 335239000,
+    "intangible_amortization": 116721000,
+    "goodwill_impairment": 1154728000,
+    "intangible_impairment": 3490098000,
+    "inventory_writedown": 911092000,
+    "operating_net_2023": 8349338000
+  },
+  "ratios": {
+    "gross_margin": 0.3957,
+    "selling_expense_ratio": 0.2604,
+    "admin_expense_ratio": 0.0477,
+    "net_margin": 0.0012,
+    "debt_ratio": 0.5482,
+    "current_ratio": 0.9665,
+    "free_cash_flow": 4857127000,
+    "ocf_to_net_profit": 37.1,
+    "ocf_to_parent_profit": 79.73,
+    "definitions": {
+      "gross_margin": "毛利 ÷ 收入",
+      "net_margin": "本公司权益股东应占利润 ÷ 收入",
+      "debt_ratio": "总负债 ÷ 总资产",
+      "current_ratio": "总流动资产 ÷ 总流动负债",
+      "free_cash_flow": "经营活动现金净额 − 购置物业厂房设备、在建工程、无形资产、土地使用权"
+    }
+  },
+  "goodwill_detail": {
+    "_note": "取自蒙牛 2024 年报管理层讨论与分析 page_045.md ~ page_047.md（中英双语）。",
+    "bellamy": {
+      "acquired": "2019 年 9 月 15 日，每股 12.65 澳元（68.15 港元）收购贝拉米全部股份",
+      "consideration_aud": 1460000000.0,
+      "consideration_rmb": 7140000000,
+      "goodwill_at_acquisition_aud": 550000000,
+      "trademark_at_acquisition_aud": 1132000000,
+      "impairment_2024": {
+        "goodwill": 1154728000,
+        "intangible_trademark": 3490098000,
+        "deferred_tax_reversal": 663400000,
+        "total_impact": 3981400000
+      }
+    },
+    "modern_farming": {
+      "note": "联营公司现代牧业年内商誉减值 5.992 亿元，导致蒙牛应占其业绩亏损 8.271 亿元，其中商誉减值影响 3.487 亿元"
+    }
+  }
+}
