@@ -79,11 +79,11 @@ def check_file(path: pathlib.Path) -> list:
         )
 
     # }_{ ：下划线紧跟在标点 } 后面会被 Markdown 当成强调。
-    # 但 \underbrace{...}_{...} 这类在数学环境里合法，只在数学定界符之外告警。
-    outside_math = re.sub(r"\$\$.*?\$\$", "", prose, flags=re.DOTALL)
-    outside_math = re.sub(r"\$[^$]*\$", "", outside_math)
-    if "}_{" in outside_math:
-        problems.append("  出现 }_{：会被 Markdown 当成下划线强调，请写 }\\_{")
+    # 注意 Markdown 解析在 MathJax 之前，公式内部同样会被吃掉（\underbrace{X}_{Y}
+    # 会被渲染成 <em>…</em>，MathJax 收到残缺的 TeX），所以这里不豁免 $…$ / $$…$$；
+    # 正确写法是 }\_{。
+    if re.search(r"(?<!\\)}_{", prose):
+        problems.append("  出现 }_{：会被 Markdown 当成下划线强调（公式内同样如此），请写 }\\_{")
 
     # Unicode 数学字符残留
     leftover = sorted({c for c in prose if c in BANNED})
