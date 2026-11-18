@@ -94,6 +94,7 @@
 | 流动资产 | current assets | 一年内（或一个营业周期内）能变成现金的资产 |
 | 非流动资产 | non-current assets | 一年以上才能变成现金的资产 |
 | 流动性 | liquidity | 一项资产变成现金的速度，以及变现时会不会打折 |
+| 能动（可动用） | freely available | 账面上算流动资产、但真正能马上变成"能花的钱"的部分；判据是速度、打不打折、能不能自己支配 |
 | 营业周期 | operating cycle | 从买原料到收回货款走完一圈的时间 |
 | 流动负债 | current liabilities | 一年内要还的负债 |
 | 流动比率 | current ratio | 流动资产 ÷ 流动负债，衡量短期覆盖 |
