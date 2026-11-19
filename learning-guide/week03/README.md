@@ -104,7 +104,8 @@
 | 大额存单 | large-denomination certificate of deposit | 起点较高、利率高于活期的存款凭证；期限超一年要记非流动资产 |
 | 应收账款 | accounts receivable / trade receivables | 已交货已开票、客户还没付的钱 |
 | 应收票据 | notes receivable | 客户给的票据，银行承兑的几乎无坏账风险，还可背书转让 |
-| 账龄 | aging | 应收账款形成至今的时间长度，越长越可能收不回 |
+| 账期 | credit terms | 合同约定的"货到后多少天付款"，是往后看的义务；和账龄不是一回事 |
+| 账龄 | aging | 应收账款从发生日算到报表日的时长，越长越可能收不回；不是"约定多久还钱" |
 | 坏账准备 | allowance for doubtful accounts | 预先认掉的、预计收不回的应收账款 |
 | 信用减值损失 | credit impairment loss | 利润表上因信用风险计提的损失（应收、保理、担保、小贷等） |
 | 存货 | inventory | 原材料、半成品、库存商品、包装材料等 |
