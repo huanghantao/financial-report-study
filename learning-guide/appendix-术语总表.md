@@ -41,7 +41,7 @@
 | 应收账款 | accounts receivable / trade receivables | 赊账卖货还没收回来的钱 |
 | 预付款项 | prepayments | 先付钱、后收货 |
 | 其他应收款 | other receivables | 杂项应收，常是关联方占款的重灾区 |
-| 存货 | inventory / inventories | 原材料、在产品、产成品 |
+| 存货 | inventory / inventories | 原材料、在产品（半成品）、产成品 |
 | 合同资产 | contract assets | 已完工但还没到收款节点的权利 |
 | 长期股权投资 | long-term equity investments | 对联营、合营企业的投资 |
 | 固定资产 | fixed assets / property, plant and equipment | 厂房、机器、设备，按净值记 |
