@@ -23,6 +23,10 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 # 标点（如"沃伦·巴菲特"）放行；其余位置（数学语境）一律要求改写为 \cdot。
 BANNED = set("×≈≠≤≥√∑∏λθαβγεΣΠΔ¹²³⁰ᵀ⁻½⅓⅔¼₁₂⇔−")
 
+# 数学区间：独立公式 $$...$$ 与行内公式 $...$（group(1) 是公式体）
+DISPLAY_MATH = re.compile(r"\$\$(.+?)\$\$", re.DOTALL)
+INLINE_MATH = re.compile(r"(?<![\\$])\$(?!\$)([^$\n]+?)\$(?!\$)")
+
 
 def is_cjk(ch: str) -> bool:
     return "\u4e00" <= ch <= "\u9fff"
@@ -71,12 +75,24 @@ def check_file(path: pathlib.Path) -> list:
         problems.append("  残留制表符矩阵边框（┌┐└┘│）")
 
     # 单反斜杠 + ASCII 标点：mdBook 的 Markdown 解析器会吃掉反斜杠
-    eaten = sorted(set(re.findall(r"(?<!\\)\\[;,:|{}!~]", prose)))
+    # 注意 % 也在此列：\% 会被吃成 %，MathJax 收到裸 % 当注释，吞掉后面整段公式。
+    eaten = sorted(set(re.findall(r"(?<!\\)\\[;,:|{}!~%]", prose)))
     if eaten:
         problems.append(
             f"  会被 Markdown 吃掉反斜杠的写法：{' '.join(eaten)}"
-            "（间距请用 \\ ，范数请用 \\Vert，集合括号请用 \\lbrace \\rbrace）"
+            "（间距请用 \\ ，范数请用 \\Vert，集合括号请用 \\lbrace \\rbrace，"
+            "百分号请写 \\\\%）"
         )
+
+    # 公式内的裸 %：MathJax 会把它当 TeX 注释，后面的公式内容整段消失
+    for m in list(DISPLAY_MATH.finditer(prose)) + list(INLINE_MATH.finditer(prose)):
+        body = m.group(1)
+        if re.search(r"(?<!\\)%", body):
+            problems.append(
+                f"  公式内出现裸 %（会被 MathJax 当注释吞掉后面内容，请写 \\\\%）："
+                f"{m.group(0).strip()[:60]}"
+            )
+            break
 
     # }_{ ：下划线紧跟在标点 } 后面会被 Markdown 当成强调。
     # 注意 Markdown 解析在 MathJax 之前，公式内部同样会被吃掉（\underbrace{X}_{Y}
